@@ -11,9 +11,6 @@
 # - All batting logs were combined into one .csv file
 # - Data source is baseball-reference.com
 
-# In[1]:
-
-
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -21,28 +18,8 @@ import pandas as pd
 import numpy as np
 
 
-# In[3]:
-
-
 #Read local .csv downloaded and combined from 2021 batting logs for all 30 Major League Baseball teams 
 #from baseball-reference.com and store data in a dataframe
-df = pd.read_csv('sportsref_download.csv')
-df.info()
-
-
-# In[4]:
-
-
-df.head()
-
-
-# In[5]:
-
-
-df.tail()
-
-
-# In[6]:
 
 
 #Function to get baseball batting log data
@@ -53,8 +30,6 @@ def get_batting_log_data():
     return df
     
 
-
-# In[ ]:
 
 
 

@@ -15,7 +15,12 @@
 # 
 # ### Clean up and prepare data obtained to use for exploration and modeling
 # 
-
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from scipy import stats
 
 
 def prepare_data():
@@ -61,3 +66,22 @@ def prepare_data():
 # - Created 'is_win' column to capture the result of the game, win or loss
 # - Dropped unnecessary columns, "Rk", "Gtm", "Unnamed: 4" and  because they were used on the website to show the count of the columns in the table, the game number of the season, and the "@" to indicate away game which a new column was created to capture.  
 # - Created function, prepare_data(), to clean up and prepare all data acquired as described above
+
+
+
+def train_validate_test_split(df, target, seed=123):
+    '''
+    This function takes in a dataframe, the name of the target variable
+    (for stratification purposes), and an integer for a setting a seed
+    and splits the data into train, validate and test. 
+    Test is 20% of the original dataset, validate is .30*.80= 24% of the 
+    original dataset, and train is .70*.80= 56% of the original dataset. 
+    The function returns, in this order, train, validate and test dataframes. 
+    '''
+    train_validate, test = train_test_split(df, test_size=0.2, 
+                                            random_state=seed, 
+                                            stratify=df[target])
+    train, validate = train_test_split(train_validate, test_size=0.3, 
+                                       random_state=seed,
+                                       stratify=train_validate[target])
+    return train, validate, test
