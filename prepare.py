@@ -23,6 +23,8 @@ import os
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from scipy import stats
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import explained_variance_score
 
 
 def prepare_data():
@@ -125,3 +127,29 @@ def category_percentages_by_another_category_col(df, category_a, category_b):
     .rename('percent')
     .reset_index()
     .pipe((sns.catplot, 'data'), x=category_a, y='percent', col=category_b, kind='bar', ))
+
+
+def make_metric_df(y, y_pred, model_name, metric_df):
+    if metric_df.size ==0:
+        metric_df = pd.DataFrame(data=[
+            {
+            'model': model_name, 
+            'RMSE_validate': mean_squared_error(
+                y,
+                y_pred) ** .5,
+            'r^2_validate': explained_variance_score(
+                y,
+                y_pred)
+            }])
+        return metric_df
+    else:
+        return metric_df.append(
+        {
+            'model': model_name, 
+            'RMSE_validate': mean_squared_error(
+                y,
+                y_pred) ** .5,
+            'r^2_validate': explained_variance_score(
+                y,
+                y_pred)
+        }, ignore_index=True)
