@@ -70,6 +70,7 @@ def prepare_data():
                                (df['Team'].str.contains('L.A. Dodgers'))|
                                (df['Team'].str.contains('S.F. Giants'))|
                                (df['Team'].str.contains('N.Y. Yankees'))|
+                                (df['Team'].str.contains('Tampa Bay Rays'))|
                                (df['Team'].str.contains('St. Louis Cardinals'))
                                , 1, 0)
 
