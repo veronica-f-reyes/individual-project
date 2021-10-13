@@ -33,6 +33,45 @@ I will be using the baseball team logging for batting and ptiching for all 30 ML
 
 The target variable for this assessment is going to be the feature Result.
 
+### Data Dictionary
+
+ #   Column                  Non-Null Count  Dtype  
+---  ------                  --------------  -----  
+ 0   Team                    4858 non-null   object 
+ 1   Date                    4858 non-null   object 
+ 2   Opp                     4858 non-null   object 
+ 3   Rslt                    4858 non-null   object 
+ 4   plate_app               4858 non-null   int64  
+ 5   at_bats                 4858 non-null   int64  
+ 6   runs_scored             4858 non-null   int64  
+ 7   hits                    4858 non-null   int64  
+ 8   doubles                 4858 non-null   int64  
+ 9   triples                 4858 non-null   int64  
+ 10  HR                      4858 non-null   int64  
+ 11  RBI                     4858 non-null   int64  
+ 12  bases_on_balls          4858 non-null   int64  
+ 13  intentional_bb          4858 non-null   int64  
+ 14  strikeouts              4858 non-null   int64  
+ 15  hit_by_pitch            4858 non-null   int64  
+ 16  sac_hits                4858 non-null   int64  
+ 17  sac_flies               4858 non-null   int64  
+ 18  reached_on_error        4858 non-null   int64  
+ 19  double_plays            4858 non-null   int64  
+ 20  stolen_bases            4858 non-null   int64  
+ 21  caught_stealing         4858 non-null   int64  
+ 22  batting_avg             4858 non-null   float64
+ 23  OBP                     4858 non-null   float64
+ 24  SLG                     4858 non-null   float64
+ 25  OPS                     4858 non-null   float64
+ 26  left_on_base            4858 non-null   int64  
+ 27  num_players_used        4858 non-null   int64  
+ 28  handedness_opp_pitcher  4858 non-null   object 
+ 29  Opp. Starter (GmeSc)    4858 non-null   object 
+ 30  is_away                 4858 non-null   int64  
+ 31  is_win                  4858 non-null   int64  
+ 32  made_playoffs           4858 non-null   int64 
+
+
 
 ## Acquire
 

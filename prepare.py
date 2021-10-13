@@ -72,6 +72,33 @@ def prepare_data():
                                (df['Team'].str.contains('N.Y. Yankees'))|
                                (df['Team'].str.contains('St. Louis Cardinals'))
                                , 1, 0)
+
+        #Feature Engineering: Create rolling averages per team using the last 3 games to use for modeling
+        df['roll_plate_app'] = df.groupby('Team')['plate_app'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_at_bats'] = df.groupby('Team')['at_bats'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_runs_scored'] = df.groupby('Team')['runs_scored'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_hits'] = df.groupby('Team')['hits'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_doubles'] = df.groupby('Team')['doubles'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_triples'] = df.groupby('Team')['triples'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_HR'] = df.groupby('Team')['HR'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_RBI']= df.groupby('Team')['RBI'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_bases_on_balls']= df.groupby('Team')['bases_on_balls'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_intentional_bb']= df.groupby('Team')['intentional_bb'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_strikeouts']= df.groupby('Team')['strikeouts'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_hit_by_pitch']= df.groupby('Team')['hit_by_pitch'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_sac_hits']= df.groupby('Team')['sac_hits'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_sac_flies']= df.groupby('Team')['sac_flies'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_reached_on_error']= df.groupby('Team')['reached_on_error'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_double_plays']= df.groupby('Team')['double_plays'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_stolen_bases']= df.groupby('Team')['stolen_bases'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_caught_stealing']= df.groupby('Team')['caught_stealing'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_batting_avg']= df.groupby('Team')['batting_avg'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_OBP']= df.groupby('Team')['OBP'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_SLG']= df.groupby('Team')['SLG'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_OPS']= df.groupby('Team')['OPS'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_left_on_base']= df.groupby('Team')['left_on_base'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_num_players_used']= df.groupby('Team')['num_players_used'].transform(lambda x: x.rolling(3, 1).mean())
+        df['roll_is_win'] = df.groupby('Team')['is_win'].transform(lambda x: x.rolling(3, 1).mean())                       
         
         # Drop unnecessary columns
         df = df.drop(columns=['Rk', 'Gtm', 'Unnamed: 4'])
@@ -153,3 +180,13 @@ def make_metric_df(y, y_pred, model_name, metric_df):
                 y,
                 y_pred)
         }, ignore_index=True)
+
+def was_hypothesis_rejected(alpha, null_hyp, p):
+
+    if p < alpha:
+        print("We reject the hypothesis that", null_hyp)
+    else:
+        print("We fail to reject the null hypothesis")
+    
+    return
+            
