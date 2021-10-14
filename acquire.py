@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 
 import pandas as pd
 import numpy as np
-
+import os
 
 #Read local .csv downloaded and combined from 2021 batting logs for all 30 Major League Baseball teams 
 #from baseball-reference.com and store data in a dataframe
@@ -25,9 +25,17 @@ import numpy as np
 #Function to get baseball batting log data
 
 def get_batting_log_data():
-    df = pd.read_csv('sportsref_download.csv')
+
+    filename = "baseball.csv"
+
+
+    if os.path.isfile(filename):
+       return pd.read_csv(filename)
+    else:
+
+        df = pd.read_csv('sportsref_download.csv')
     
-    return df
+        return df
     
 
 
