@@ -1,5 +1,7 @@
 # Predicting Major League Baseball (MLB) Outcomes
 ***
+![baseball_stadium](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOfGMVLGclDKdofCZqf_jD6Dq6dUnPK0Rsmw&usqp=CAU)
+
 ## Executive Summary
 
 ### Overview:
