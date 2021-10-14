@@ -130,7 +130,7 @@ For the classification model predicting whether the team won, I ran statistical 
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a) : There is a difference between number of runs scored in a winning game  and the overall average.
 
-FINDING: We reject the hypothesis that winning is not related to number of runs scored
+`FINDING`: We reject the hypothesis that winning is not related to number of runs scored
 
 ### Hypothesis 2: Does number of hits differ by winning teams?  
 
@@ -138,7 +138,7 @@ FINDING: We reject the hypothesis that winning is not related to number of runs 
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a): There is a difference between number of hits by winning teams and the overall average.
 
-FINDING: We reject the hypothesis that winning is not related to number of hits in a game
+`FINDING`: We reject the hypothesis that winning is not related to number of hits in a game
 
 ### Hypothesis  3: Does number of homeruns differ by winning teams?  
 
@@ -146,7 +146,7 @@ FINDING: We reject the hypothesis that winning is not related to number of hits 
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a) : There is a difference between number of homeruns by winning teams and the overall average.
 
-FINDING: We reject the hypothesis that winning is not related to number of homeruns in a game
+`FINDING`: We reject the hypothesis that winning is not related to number of homeruns in a game
 
 ### Hypothesis 4: Is winning related to the number of runs batted in (RBI)?  
 
@@ -154,7 +154,7 @@ FINDING: We reject the hypothesis that winning is not related to number of homer
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a): There is a difference between number of runs batted in in a winning game  and the overall average.
 
-FINDING: We reject the hypothesis that winning is not related to number of runs batted in a game
+`FINDING`: We reject the hypothesis that winning is not related to number of runs batted in a game
 
 ### Hypothesis 5: Is winning related to the number of total appearances at the plate by a player in the game? 
 
@@ -162,7 +162,7 @@ FINDING: We reject the hypothesis that winning is not related to number of runs 
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a): There is a relationship between winning and the number of plate appearances.
 
-FINDING: We reject the hypothesis that winning is not related to number of total plate appearances in a game
+`FINDING`: We reject the hypothesis that winning is not related to number of total plate appearances in a game
 
 ### Hypothesis 6: Is winning related to the number of doubles that were hit in the game?
 
@@ -170,7 +170,7 @@ FINDING: We reject the hypothesis that winning is not related to number of total
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a): There is a relationship between winning and the number of doubles in a game.
 
-FINDING: We reject the hypothesis that winning is not related to number of doubles hit in a game
+`FINDING`: We reject the hypothesis that winning is not related to number of doubles hit in a game
 
 ### Hypothesis 7: Is winning related to the number of bases that were obtained by being walked by the pitcher? 
 
@@ -178,7 +178,7 @@ FINDING: We reject the hypothesis that winning is not related to number of doubl
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a): There is a relationship between winning and the number of walks in a game.
 
-FINDING: We reject the hypothesis that winning is not related to number of walks in a game
+`FINDING`: We reject the hypothesis that winning is not related to number of walks in a game
 
 ### Hypothesis  8: Is winning related to whether the team is playing away?  
 
@@ -186,7 +186,7 @@ FINDING: We reject the hypothesis that winning is not related to number of walks
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cinline%20H_a): There is a relationship between winning and a team playing away.
 
-FINDING: We reject the hypothesis that winning is independent of whether a team is playing away
+`FINDING`: We reject the hypothesis that winning is independent of whether a team is playing away
 
 
 For the linear regression models predicting the number of runs scored, I ran statistical tests for independence.
