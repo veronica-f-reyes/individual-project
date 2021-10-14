@@ -144,7 +144,7 @@ FINDING: We reject the hypothesis that winning is not related to number of hits 
 
 $H_0$ : There is no difference between number of homeruns by winning teams and the overall average.
 
-$H_a$ : There is a difference between number of homeruns by winning teams and the overall average.
+$ H_a $ : There is a difference between number of homeruns by winning teams and the overall average.
 
 FINDING: We reject the hypothesis that winning is not related to number of homeruns in a game
 
@@ -158,7 +158,7 @@ FINDING: We reject the hypothesis that winning is not related to number of runs 
 
 ### Hypothesis 5: Is winning related to the number of total appearances at the plate by a player in the game? 
 
-$H_0$ : There is no relationship between winning and the number of plate appearances.
+$$H_0$$ : There is no relationship between winning and the number of plate appearances.
 
 $H_a$ : There is a relationship between winning and the number of plate appearances.
 
