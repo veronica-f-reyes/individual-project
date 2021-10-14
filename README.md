@@ -27,14 +27,14 @@ I was able to create a machine learning model using classification algorithms to
 
 - Our model was able to predict a baseball games outcome with an accuracy of 58% on out of sample data beating the baseline of 50%.
  
-- Our model for predicting the number of runs a baseball team scored also performed better than the baseline accounting for a 17% improvement over the baseline error.  
+- Our model for predicting the number of runs a baseball team scored also performed better than the baseline accounting for a 35% improvement over the baseline error.  
 
 - While not a significant advantage over the baseline, these models may help give a baseball club, a person or group trying their hands at odds, or simply a baseball fan an edge in trying to predict the outcome of a game they follow.
 -  The top features used in our model included the 3 game rolling averages per team of:
 - RBIs, runs, hits, homeruns, plate appearances, doubles, walks in a game
 
 - The top features used in our model included the 3 game rolling averages per team of previously played games for the following baseball hitting stats:
-- RBIs, on base percentage (OBP), slugging percentage (SLG), OPS (SLG + OBP), batting average
+- RBIs, hits, plate appearances and home runs
  
 My findings indicate that using past games' hitting performance is not necessarily a signicant predictor of what is going to happen in the next game, but may help you beat the odds.  
 
@@ -238,13 +238,12 @@ The goal is to develop a classification and regression model that performs bette
     
 #### For linear regression model predicting number of runs, I chose the Ordinary Least Squares Linear Regression model due to its lowest RMSE and highest explained variance, $R^2$
 
-- The Linear Regression model performed well on out of sample (test) data beating the baseline with an explained variance score, $R^2$, of 17% and came up with the lowest RMSE of 2.76.
+- The Linear Regression model performed well on out of sample (test) data beating the baseline with an explained variance score, $R^2$, of 35% and came up with the lowest RMSE of 2.43.
 - Features used for this model include rolling averages for the following baseball hitting stats:
     - `'roll_RBI'` - runs batted in; a stat indicating that a baseball player got a hit that resulted in a run being scored. 
-    - `'roll_OBP'` - on base percentage; a stat capturing the percentage a number times a player gets on base
-    - `'roll_SLG'` - slugging percentage; a stat capturing the hitting 'power' of a baseball player by giving more weight to more base earned hits; Total Bases/At Bats or (1B + 2*2B + 3*3B + 4*HR)/AB
-    - `'roll_OPS'` - a combination of OBP and SLP to measure a baseball players ability to get on base and hit the ball; On-Base + Slugging Percentages
-    - `'roll_batting_avg'` - the average number of times a baseball player hit the ball and got on base; Hits/At Bats
+    - `'roll_hits'`  - rolling average of hits in the past 3 games per team
+    - `'roll_plate_app'` - rolling average of plate appearances in the past 3 games per team
+    - `'roll_HR'` - rolling average of home runs in the past 3 games per team
 
 ## DELIVER:
 ***
