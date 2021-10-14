@@ -21,6 +21,29 @@ In this project, I seek to better understand the game of baseball and to forecas
 - Find drivers of runs scored
 - Create a regression model to predict the number of runs scored in a baseball game
 
+#### Conclusion & Key Findings:
+
+I was able to create a machine learning model using classification algorithms to predict whether a team would win or lose a game using a team's previous three games average hitting statistics. I was also able to create a regression model to predict the number of runs a team would have in a game using the team's previous three games average hitting statistics.
+
+- Our model was able to predict a baseball games outcome with an accuracy of 58% on out of sample data beating the baseline of 50%.
+ 
+- Our model for predicting the number of runs a baseball team scored also performed better than the baseline accounting for a 17% improvement over the baseline error.  
+
+- While not a significant advantage over the baseline, these models may help give a baseball club, a person or group trying their hands at odds, or simply a baseball fan an edge in trying to predict the outcome of a game they follow.
+-  The top features used in our model included the 3 game rolling averages per team of:
+- RBIs, runs, hits, homeruns, plate appearances, doubles, walks in a game
+
+- The top features used in our model included the 3 game rolling averages per team of previously played games for the following baseball hitting stats:
+- RBIs, on base percentage (OBP), slugging percentage (SLG), OPS (SLG + OBP), batting average
+ 
+My findings indicate that using past games' hitting performance is not necessarily a signicant predictor of what is going to happen in the next game, but may help you beat the odds.  
+
+#### Next Steps:
+
+- With more time, I would like to continue trying out other models using new features and changing the hyperparameters to see if we can beat our forecasting performance.
+- I would like to incorporate pitching and fielding data to our data set to have more features to predict with and include more seasons of games played.
+- I would also like to create a time series model to predict the future record of a team.
+
 
 ### Project Deliverables
 
