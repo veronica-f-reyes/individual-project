@@ -27,9 +27,9 @@ In this project, I seek to better understand the game of baseball and to forecas
 
 ### Project Context
 
-- I will be using the baseball team logging for batting and ptiching for all 30 MLB team datasets from baseball-reference.com.
+- I will be using the baseball team hitting game logs data for all 30 MLB team datasets from baseball-reference.com.
 
-- The target variable for this assessment is going to be the feature is_win for the classification model and runs_scored for the linear regression model.
+- The target variable for this assessment is going to be the feature `is_win` for the classification model and `runs_scored` for the linear regression model.
 
 ### DATA DICTIONARY
 
@@ -87,7 +87,7 @@ In this project, I seek to better understand the game of baseball and to forecas
 
 See my Trello board here --> https://trello.com/b/D3fCAVA7/baseball-project
 
-Working through the data science pipeline, I will acquire data from baseball-reference.com.  I will download all 30 MLB teams' baseball hitting game logs and combine them into one .csv file. I will prepare the data using a prepare.py file which will get rid of unneeded columns,rename columns,  and create new columns to capture rolling averages and encode columns. Then I will explore the data by looking for possible relationships between features and look at how they are distributed by creating plots and looking at the data. Next I will create models using Decision Tree, Random Forest and K - Nearest Neighbors Classifiers. I will then compare the models that were run on training data to validate data before running our model on the test data to get the final accuracy. I will then create linear regression models using Linear Regressor, Tweedie Regressor, Lasso Lars Regressors, and Polynomial Linear Regressors.  I will then turn in the Jupyter Notebook with the code of this entire process.
+Working through the data science pipeline, I will acquire data from baseball-reference.com.  I will download all 30 MLB teams' baseball hitting game logs and combine them into one .csv file. I will prepare the data using a prepare.py file which will get rid of unneeded columns,rename columns,  and create new columns to capture rolling averages and encode columns. Then I will explore the data by looking for possible relationships between features and look at how they are distributed by creating plots and looking at the data. Next I will create models using Decision Tree, Random Forest and K - Nearest Neighbors Classifiers. I will then compare the models that were run on training data to validate data before running our model on the test data to get the final accuracy. I will then create linear regression models using Linear Regressor, Tweedie Regressor, Lasso Lars Regressors, and Polynomial Linear Regressors, evaluate model performance and then run the best model on out of sample data.  I will then create and turn in a final Jupyter Notebook with the code of this entire process.
 
 ## ACQUIRE: 
 ***
@@ -105,24 +105,24 @@ Working through the data science pipeline, I will acquire data from baseball-ref
 ***
 #### Plan -> Acquire -> PREPARE -> Explore -> Model & Evaluate -> Deliver
 
-Prepped and cleaned the data acquired from baseball-reference.com. Used functions in prepare.py to accomplish the following:
+I prepped and cleaned the data acquired from baseball-reference.com. I then used functions in prepare.py to accomplish the following:
 
--Created 3 game rolling average columns for all hitting stats for use in predictive modeling
--Created 'is_away' column to capture that the game was played away, not at home stadium
+- Create 3 game rolling average columns for all hitting stats for use in predictive modeling
+- Create 'is_away' column to capture that the game was played away, not at home stadium
 Renamed columns for easier readability
--Created 'is_win' column to capture the result of the game, win or loss
--Created 'made_playoffs' to capture whether the team made it to the playoffs
--Dropped unnecessary columns, "Rk", "Gtm", "Unnamed: 4" and because they were used on the website to show the count of the columns in the table, the game number of the season, and the "@" to indicate away game which a new column was created to capture.
--Created function, prepare_data(), to clean up and prepare all data acquired as described above
--Created dummy variables for categorical features
+- Create 'is_win' column to capture the result of the game, win or loss
+- Create 'made_playoffs' to capture whether the team made it to the playoffs
+- Dropp unnecessary columns, "Rk", "Gtm", "Unnamed: 4" and because they were used on the website to show the count of the columns in the table, the game number of the season, and the "@" to indicate away game which a new column was created to capture.
+- Create function, prepare_data(), to clean up and prepare all data acquired as described above
+- Create dummy variables for categorical features
 
 
 ## EXPLORE:
 ***
 #### Plan -> Acquire -> Prepare -> EXPLORE -> Model & Evaluate -> Deliver
-Visualized combinations of variables to compare relationships and check for independence or correlation between variables.
+I visualized combinations of variables to compare relationships and check for independence or correlation between variables.
 
-For the classification model predicting whether the team won, ran statistical tests for independence.
+For the classification model predicting whether the team won, I ran statistical tests for independence for the following questions:
 
 ### Hypothesis 1: Is winning related to number of runs scored?  
 
@@ -224,7 +224,7 @@ The goal is to develop a classification and regression model that performs bette
 ## DELIVER:
 ***
 #### Plan -> Acquire -> Prepare -> Explore -> Model -> DELIVER
-- A github repository containing your work with any .py files required to acquire and prepare the data and a clearly labeled final Jupyter Notebook that walks through the pipeline.
+- The final product will be a Github repository containing your work with any .py files required to acquire and prepare the data and a clearly labeled final Jupyter Notebook that walks through the pipeline.
 
 
 ## HOW TO RECREATE THIS PROJECT:
