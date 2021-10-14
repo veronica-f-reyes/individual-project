@@ -126,9 +126,9 @@ For the classification model predicting whether the team won, I ran statistical 
 
 ### Hypothesis 1: Is winning related to number of runs scored?  
 
-$H_0$ : There is no difference between number of runs scored in a winning game and the overall average.
+`Null Hypothesis `: There is no difference between number of runs scored in a winning game and the overall average.
 
-$H_a$ : There is a difference between number of runs scored in a winning game  and the overall average.
+`Alternative Hypothsesis` : There is a difference between number of runs scored in a winning game  and the overall average.
 
 FINDING: We reject the hypothesis that winning is not related to number of runs scored
 
